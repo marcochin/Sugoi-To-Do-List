@@ -62,5 +62,6 @@
     <string name="toast_image_attach_error">Error: Could not attach image</string>
     <string name="toast_date_set_error">Error: Could not set date</string>
     <string name="toast_time_set_error">Error: Could not set time</string>
+    <string name="toast_application_start_error">Error: Could not find application</string>
 
 </resources>

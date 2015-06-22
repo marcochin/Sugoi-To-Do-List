@@ -1,6 +1,7 @@
 package com.mcochin.todolist.dialogs;
 
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
@@ -8,6 +9,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -62,13 +64,15 @@ public class AttachmentDialog extends DialogFragment implements View.OnClickList
             case R.id.button_cancel:
                 dismiss();
                 break;
+
             case R.id.button_gallery:
                 i = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                startActivityForResult(Intent.createChooser(i, getString(R.string.dialog_attachment_intent_window_title)), REQUEST_IMAGE_PICK);
+                startApplication(i);
                 break;
+
             case R.id.button_camera:
                 i = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(Intent.createChooser(i, getString(R.string.dialog_attachment_intent_window_title)), REQUEST_IMAGE_CAPTURE);
+                startApplication(i);
                 break;
         }
     }
@@ -107,6 +111,15 @@ public class AttachmentDialog extends DialogFragment implements View.OnClickList
                     dismiss();
                     break;
             }
+        }
+    }
+
+    private void startApplication(Intent i){
+        try {
+            startActivityForResult(Intent.createChooser(i, getString(R.string.dialog_attachment_intent_window_title)), REQUEST_IMAGE_CAPTURE);
+        }catch(ActivityNotFoundException e){
+            Toast.makeText(getActivity(), getString(R.string.toast_application_start_error), Toast.LENGTH_LONG).show();
+            Log.e(TAG, e.getMessage() + "\n" + Log.e(TAG, Log.getStackTraceString(e)));
         }
     }
 
