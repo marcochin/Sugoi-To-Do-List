@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_primary">#2ec4b6</color>
+    <color name="color_primary_dark">#249c91</color>
+    <color name="color_accent">#a5ffd6</color>
+
+    <!--toolbar and overflow menu-->
+    <color name="toolbar_title_color">@color/primary_material_light</color>
+    <color name="overflow_menu_icon_color">@color/toolbar_title_color</color>
+    <color name="overflow_menu_item_text_color">@color/color_primary</color>
+
+    <!-- regular buttons -->
+    <color name="button_flat_pressed">#ffe0e0e0</color>
+
+    <!-- opened list bg states-->
+    <color name="bg_item_checked_state">@color/color_accent</color>
+    <color name="bg_item_normal_state">@color/primary_material_light</color>
+    <color name="bg_item_pressed_state">#ffe0e0e0</color>
+
+    <color name="bg_drag_item_active_state">#00ebff</color>
+    <color name="bg_drag_item_normal_state">#d0fbff</color>
+
+    <color name="bg_swipe_item_left">#ff4444</color>
+    <color name="bg_swipe_item_right">#f9930d</color>
+
+    <!--snackbar-->
+    <color name="snackbar_text_color">@color/primary_material_light</color>
+    <color name="snackbar_action_color">@color/snackbar_text_color</color>
+    <color name="snackbar_bg_color">@color/color_primary</color>
+
+    <!--dialog-->
+    <color name="dialog_edit_text_control_normal">@color/color_primary</color>
+    <color name="dialog_edit_text_control_activated">@color/dialog_edit_text_control_normal</color>
+    <color name="dialog_edit_text_control_highlighted">@color/dialog_edit_text_control_normal</color>
+    <color name="dialog_button_text_color">@color/dialog_edit_text_control_normal</color>
+    <color name="dialog_current_list_highlight_color">@color/color_primary_dark</color>
+    <color name="dialog_bg_color">@color/primary_material_light</color>
+    <color name="dialog_delete_extra">#ff4444</color>
+    <color name="dialog_empty_msg_color">#9c9c9c</color>
+    <color name="dialog_extra_text_color">#9c9c9c</color>
+    <!-- fab -->
+    <color name="fab_normal_state">@color/color_primary</color>
+    <color name="fab_pressed_state">@color/color_primary_dark</color>
+
+    <!--main empty list msg-->
+    <color name="empty_list_msg_text_color">@color/color_primary</color>
+
+    <!--extra are like date, time, and image attachment-->
+    <color name="item_date_time_text_color">#9c9c9c</color>
+
+
+</resources>

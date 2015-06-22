@@ -1,0 +1,2 @@
+include ':app', ':sublimepickerlibrary'
+project(':sublimepickerlibrary').projectDir = new File('app/libs/sublimepickerlibrary')

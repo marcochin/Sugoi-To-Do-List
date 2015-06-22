@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+
+    <item android:id="@+id/menu_create_new"
+        android:title="@string/menu_create_new"
+        android:orderInCategory="1"
+        android:icon="@drawable/ic_create_new"
+        app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/menu_open"
+        android:title="@string/menu_open"
+        android:orderInCategory="2"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/menu_delete"
+        android:title="@string/menu_delete"
+        android:orderInCategory="3"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/menu_save"
+        android:title="@string/menu_save"
+        android:orderInCategory="4"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/menu_save_as"
+        android:title="@string/menu_save_as"
+        android:orderInCategory="5"
+        app:showAsAction="never" />
+</menu>

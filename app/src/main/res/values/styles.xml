@@ -1,0 +1,128 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <!--color of overflow icon-->
+        <item name="android:textColorSecondary">@color/overflow_menu_icon_color</item>
+        <item name="sublimePickerStyle">@style/CalendarTimeStyleExtendedBg</item>
+    </style>
+
+    <style name="MyPopUpMenuStyle" parent="ThemeOverlay.AppCompat.Light">
+        <!--color of overflow menu text app:popupTheme="@style/MyPopUpMenuStyle"-->
+        <item name="android:textColorPrimary">@color/overflow_menu_item_text_color</item>
+    </style>
+
+    <!-- Calendar/Time Dialog style-->
+    <style name="CalendarTimeStyleExtendedBg">
+        <item name="spButtonLayoutStyle">@style/BLExtendedBgImpl</item>
+        <item name="colorAccent">@color/color_primary</item>
+        <item name="colorPrimaryDark">#141414</item>
+        <item name="colorPrimary">#212121</item>
+        <item name="android:textColorPrimary">#212121</item>
+        <item name="android:textColorSecondary">#727272</item>
+        <item name="android:textColorPrimaryInverse">#FFFFFF</item>
+    </style>
+
+    <style name="BLExtendedBgImpl" parent="ButtonLayoutStyle">
+        <item name="buttonModeSwitcherButtonStyle">@style/SInvertedButtonBarButtonStyle</item>
+        <item name="extendPartitionThroughButtonBar">true</item>
+        <item name="extendedPartitionBgColor">?attr/colorAccent</item>
+        <item name="buttonInvertedBgColor">?attr/colorAccent</item>
+        <item name="buttonPressedInvertedBgColor">@color/ripple_material_dark</item>
+    </style>
+
+    <!--edittext theme and style-->
+    <style name="MyEditTextTheme">
+        <!-- Used for the bottom line when not selected / focused -->
+        <item name="colorControlNormal">@color/dialog_edit_text_control_normal</item>
+        <item name="colorControlActivated">@color/dialog_edit_text_control_activated</item>
+        <item name="colorControlHighlight">@color/dialog_edit_text_control_highlighted</item>
+        <!-- colorControlActivated & colorControlHighlight use the colorAccent color by default -->
+    </style>
+
+    <style name="MyEditTextStyle">
+        <item name="android:inputType">textMultiLine</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:maxLines">2</item>
+    </style>
+
+    <!-- Styles for only OpenList and Delete List Dialogs-->
+    <style name="ItemOpenDeleteListRootTag">
+        <item name="android:paddingLeft">@dimen/dialog_top_section_padding_material_spec</item>
+        <item name="android:paddingRight">@dimen/dialog_top_section_padding_material_spec</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:background">@drawable/bg_item_normal_state</item>
+    </style>
+
+    <!-- swipe container item padding -->
+    <style name="SwipeContainerItemPadding">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">15dp</item>
+    </style>
+
+    <style name="ItemDateTimeStyle">
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:textSize">@dimen/list_item_date_time_text_size</item>
+        <item name="android:textColor">@color/item_date_time_text_color</item>
+    </style>
+
+    <!-- Normal Dialog styles per material spec-->
+    <style name="DialogRootTag">
+        <item name="android:minWidth">@dimen/dialog_window_min_width</item>
+        <item name="android:background">@color/dialog_bg_color</item>
+    </style>
+
+    <style name="DialogTopSection">
+        <item name="android:padding">@dimen/dialog_top_section_padding_material_spec</item>
+    </style>
+
+    <style name="DialogButtonSection">
+        <item name="android:gravity">right</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingLeft">24dp</item>
+    </style>
+
+    <style name="DialogButton">
+        <item name="android:background">@drawable/button_dialog_flat</item>
+        <item name="android:textColor">@color/dialog_button_text_color</item>
+        <item name="android:textSize">@dimen/dialog_button_text_size</item>
+    </style>
+
+    <style name="DialogImageButton">
+        <item name="android:background">@drawable/button_dialog_flat</item>
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="DialogAddEditItemImageAttachMsg">
+        <item name="android:layout_marginLeft">@dimen/dialog_extra_text_view_margin_left</item>
+        <item name="android:textColor">@color/dialog_extra_text_color</item>
+    </style>
+
+    <style name="DialogOpenDeleteListEmptyMsg">
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:paddingRight">24dp</item>
+        <item name="android:paddingLeft">24dp</item>
+        <item name="android:textColor">@color/dialog_empty_msg_color</item>
+    </style>
+
+    <!-- styles specific to only the image attachment dialog-->
+    <style name="DialogAttachmentRootTag">
+        <item name="android:minWidth">@dimen/dialog_small_window_min_width</item>
+        <item name="android:background">@color/dialog_bg_color</item>
+    </style>
+
+    <style name="DialogAttachmentButtonText">
+        <item name="android:textColor">@color/dialog_button_text_color</item>
+    </style>
+</resources>

@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">Sugoi To Do List</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- System Exceptions-->
+    <string name="exception_use_new_instance">Please use the newInstance() method</string>
+    <string name="exception_add_listener_on_edit_dialog">"Can\'t set OnAddItemCLickListener on EditDialog</string>
+    <string name="exception_edit_listener_on_add_dialog">Can\'t set OnEditItemEventListener on AddDialog</string>
+    <string name="exception_date_listener_on_time_dialog">Can\'t set OnDateSetListener on TimeDialog</string>
+    <string name="exception_time_listener_on_date_dialog">Can\'t set OnTimeSetListener on DateDialog</string>
+
+    <string name="empty_list_msg">Press the add button \nto add an item to the list</string>
+    <string name="empty_msg">Empty</string>
+
+    <!--Menu-->
+    <string name="menu_create_new">Create New</string>
+    <string name="menu_open">Open</string>
+    <string name="menu_delete">Delete</string>
+    <string name="menu_save">Save</string>
+    <string name="menu_save_as">Save As</string>
+
+    <!--SnackBar-->
+    <string name="snack_bar_text_item_removed">Item removed</string>
+    <string name="snack_bar_action_undo">UNDO</string>
+
+    <!--Dialog-->
+    <string name="dialog_edit_text_hint_thing_to_do">Thing to do...</string>
+    <string name="dialog_edit_text_list_name">List name (alphanumeric)...</string>
+    <string name="dialog_button_cancel">CANCEL</string>
+    <string name="dialog_button_edit">EDIT</string>
+    <string name="dialog_button_add">ADD</string>
+    <string name="dialog_button_delete">DELETE</string>
+    <string name="dialog_button_save_as">SAVE AS</string>
+    <string name="dialog_button_open">OPEN</string>
+
+    <!-- Delete Current List Dialog -->
+    <string name="dialog_delete_current_list">Delete Current List ?</string>
+
+    <!-- Dialog Attachment -->
+    <string name="dialog_attachment_button_gallery">Gallery</string>
+    <string name="dialog_attachment_button_camera">Camera</string>
+    <string name="dialog_attachment_intent_window_title">Select application</string>
+
+    <!-- Toast msgs -->
+    <string name="toast_delete_list_singular">List deleted</string>
+    <string name="toast_delete_list_plural">Lists deleted</string>
+    <string name="toast_new_list_created">New list created</string>
+    <string name="toast_list_saved">List saved</string>
+    <string name="toast_list_opened">List opened</string>
+    <string name="toast_list_open_no_selection">Please select a list</string>
+    <string name="toast_image_attached">Image attached</string>
+
+    <!-- Toast errors -->
+    <string name="toast_duplicate_list_name">Error: Name already exists</string>
+    <string name="toast_delete_list_singular_error">Error: Could not delete list</string>
+    <string name="toast_delete_list_plural_error">Error: Could not delete lists</string>
+    <string name="toast_new_list_created_error">Error: Could not create new list</string>
+    <string name="toast_list_saved_error">Error: Could not save list</string>
+    <string name="toast_list_opened_error">Error: Could not open list</string>
+    <string name="toast_image_attach_error">Error: Could not attach image</string>
+    <string name="toast_date_set_error">Error: Could not set date</string>
+    <string name="toast_time_set_error">Error: Could not set time</string>
+
+</resources>

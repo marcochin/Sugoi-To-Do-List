@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    style="@style/DialogRootTag">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        style="@style/DialogTopSection">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
+            android:gravity="right">
+
+            <RelativeLayout
+                android:id="@+id/button_date"
+                android:layout_width="@dimen/dialog_add_extras_image_height_width"
+                android:layout_height="@dimen/dialog_add_extras_image_height_width"
+                style="@style/DialogImageButton">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_calendar"/>
+
+                <ImageView
+                    android:id="@+id/x_mark_delete_date"
+                    android:layout_width="@dimen/dialog_x_mark_height_width"
+                    android:layout_height="@dimen/dialog_x_mark_height_width"
+                    android:src="@drawable/ic_delete_extra"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/button_time"
+                android:layout_width="@dimen/dialog_add_extras_image_height_width"
+                android:layout_height="@dimen/dialog_add_extras_image_height_width"
+                android:layout_marginLeft="@dimen/dialog_extra_button_margin_left"
+                style="@style/DialogImageButton">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_clock"/>
+
+                <ImageView
+                    android:id="@+id/x_mark_delete_time"
+                    android:layout_width="@dimen/dialog_x_mark_height_width"
+                    android:layout_height="@dimen/dialog_x_mark_height_width"
+                    android:src="@drawable/ic_delete_extra"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/button_attachment"
+                android:layout_width="@dimen/dialog_add_extras_image_height_width"
+                android:layout_height="@dimen/dialog_add_extras_image_height_width"
+                android:layout_marginLeft="@dimen/dialog_extra_button_margin_left"
+                style="@style/DialogImageButton">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_attachment"/>
+
+                <ImageView
+                    android:id="@+id/x_mark_delete_image"
+                    android:layout_width="@dimen/dialog_x_mark_height_width"
+                    android:layout_height="@dimen/dialog_x_mark_height_width"
+                    android:src="@drawable/ic_delete_extra"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/dialog_extra_text_view_margin_left">
+            <TextView
+                android:id="@+id/date_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dialog_extra_text_color"
+                android:text="4/25/15 "
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/time_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dialog_extra_text_color"
+                android:text="\@ 4:00 pm"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/dialog_edit_text_hint_thing_to_do"
+            style="@style/MyEditTextStyle"
+            android:theme="@style/MyEditTextTheme"/>
+
+        <TextView
+            android:id="@+id/image_attached_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="image.png"
+            style="@style/DialogAddEditItemImageAttachMsg"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        style="@style/DialogButtonSection">
+
+        <Button
+            android:id="@+id/button_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_button_cancel"
+            style="@style/DialogButton"/>
+
+        <Button
+            android:id="@+id/button_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_button_add"
+            style="@style/DialogButton"/>
+
+        <Button
+            android:id="@+id/button_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_button_edit"
+            style="@style/DialogButton"/>
+    </LinearLayout>
+
+</LinearLayout>

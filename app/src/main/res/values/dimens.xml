@@ -1,0 +1,36 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="toolbar_title_text_size">18sp</dimen>
+
+    <!--Image dimens-->
+    <dimen name="list_item_checkmark_height_width">25dp</dimen>
+    <dimen name="list_item_image_thumbnail_height_width">50dp</dimen>
+    <dimen name="dialog_item_checkmark_bulletpoint_height_width">20dp</dimen>
+    <dimen name="dialog_add_extras_image_height_width">35dp</dimen>
+    <dimen name="dialog_add_extra_image_height_width">50dp</dimen>
+    <dimen name="dialog_x_mark_height_width">20dp</dimen>
+
+    <!--Text Sizes-->
+    <dimen name="list_item_text_size">17sp</dimen>
+    <dimen name="list_item_date_time_text_size">13sp</dimen>
+
+    <!-- General list item dimens-->
+    <dimen name="list_item_text_margin_left">10dp</dimen>
+    <dimen name="list_item_image_thumbnail_margin_left">10dp</dimen>
+    <dimen name="list_item_image_thumbnail_margin_top">15dp</dimen>
+
+    <!-- general dialog dimens-->
+    <dimen name="dialog_window_min_width">500dp</dimen>
+    <dimen name="dialog_small_window_min_width">300dp</dimen>
+    <dimen name="dialog_button_text_size">15sp</dimen>
+    <dimen name="dialog_question_text_size">18sp</dimen>
+    <dimen name="dialog_top_section_padding_material_spec">24dp</dimen>
+    <dimen name="dialog_extra_button_margin_left">10dp</dimen>
+    <dimen name="dialog_extra_text_view_margin_left">4dp</dimen>
+
+    <!-- For scale animation-->
+    <item name="anim_scale_change" type="dimen" format="float">0.8</item>
+</resources>
