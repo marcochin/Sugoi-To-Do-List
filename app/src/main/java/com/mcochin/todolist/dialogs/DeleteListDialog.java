@@ -32,10 +32,13 @@ public class DeleteListDialog extends DialogFragment implements View.OnClickList
     public static final String BUNDLE_CURRENT_LIST_NAME = "currentListName";
     private static final String BUNDLE_CURRENT_LIST_SELECTED = "isCurrentListSelectedForDeletion";
     private static final String BUNDLE_DIALOG_LIST_ITEM_LIST = "dialogListItemsList";
+    private static final String BUNDLE_LISTS_TO_BE_DELETED = "listsToBeDelted";
 
     private RecyclerView mRecyclerView;
     private MyDeleteListDialogAdapter mMyDeleteListDialogAdapter;
     private List<DialogListItem> mDialogListItemsList;
+    private List<String> mListsToBeDeleted = new ArrayList<>();
+
     private boolean mIsCurrentListSelectedForDeletion;
 
     private OnDeleteListEventListener mOnDeleteEventListener;
@@ -68,6 +71,7 @@ public class DeleteListDialog extends DialogFragment implements View.OnClickList
         if(savedInstanceState != null){
             mIsCurrentListSelectedForDeletion = savedInstanceState.getBoolean(BUNDLE_CURRENT_LIST_NAME);
             mDialogListItemsList = savedInstanceState.getParcelableArrayList(BUNDLE_DIALOG_LIST_ITEM_LIST);
+            mListsToBeDeleted = savedInstanceState.getStringArrayList(BUNDLE_LISTS_TO_BE_DELETED);
         } else{
             mDialogListItemsList = mSQLiteDB.getAllTableNames();
         }
@@ -88,17 +92,17 @@ public class DeleteListDialog extends DialogFragment implements View.OnClickList
                 if(dialogListNameItem.isChecked()) {
                     dialogListNameItem.setChecked(false);
                     HolderCheckUncheckUtil.showCheck(holder, false);
-                    //mListsToBeDeleted.remove(mDialogListItemsList.get(position).getListName());
+                    mListsToBeDeleted.remove(dialogListNameItem.getListName());
 
-                    if(currentListName.equals(mDialogListItemsList.get(position).getListName())){
+                    if(currentListName.equals(dialogListNameItem.getListName())){
                         mIsCurrentListSelectedForDeletion = false;
                     }
                 } else { //Check
                     dialogListNameItem.setChecked(true);
                     HolderCheckUncheckUtil.showCheck(holder, true);
-                    //mListsToBeDeleted.add(mDialogListItemsList.get(position).getListName());
+                    mListsToBeDeleted.add(dialogListNameItem.getListName());
 
-                    if(currentListName.equals(mDialogListItemsList.get(position).getListName())){
+                    if(currentListName.equals(dialogListNameItem.getListName())){
                         mIsCurrentListSelectedForDeletion = true;
                     }
                 }
@@ -165,20 +169,17 @@ public class DeleteListDialog extends DialogFragment implements View.OnClickList
     @Override
     public void onSaveInstanceState(Bundle outState) {
         outState.putBoolean(BUNDLE_CURRENT_LIST_SELECTED, mIsCurrentListSelectedForDeletion);
-        outState.putParcelableArrayList(BUNDLE_DIALOG_LIST_ITEM_LIST, (ArrayList <? extends Parcelable>)mDialogListItemsList);
+        outState.putParcelableArrayList(BUNDLE_DIALOG_LIST_ITEM_LIST, (ArrayList<? extends Parcelable>) mDialogListItemsList);
+        outState.putStringArrayList(BUNDLE_LISTS_TO_BE_DELETED, (ArrayList<String>)mListsToBeDeleted);
 
         super.onSaveInstanceState(outState);
     }
 
     public void deleteCheckedLists(){
-        List<String> mListsToBeDeleted = new ArrayList<>();
 
         //remove the checked items
-        for (DialogListItem dialogListItem : mDialogListItemsList) {
-            if(dialogListItem.isChecked()){
-                mListsToBeDeleted.add(dialogListItem.getListName());
-                mDialogListItemsList.remove(new DialogListItem(dialogListItem.getListName()));
-            }
+        for (String deleteItem : mListsToBeDeleted) {
+                mDialogListItemsList.remove(new DialogListItem(deleteItem));
         }
 
         //tables deleted from db
@@ -200,8 +201,9 @@ public class DeleteListDialog extends DialogFragment implements View.OnClickList
             return;
         }
 
-        //re-sync ui of the dialog
+        //re-sync ui of the dialog and delete list auxiliary
         mMyDeleteListDialogAdapter.notifyDataSetChanged();
+        mListsToBeDeleted.clear();
 
         //close dialog is nothing to delete
         if(mDialogListItemsList.isEmpty()){

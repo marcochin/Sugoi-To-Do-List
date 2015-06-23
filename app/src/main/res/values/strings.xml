@@ -58,6 +58,7 @@
     <string name="toast_delete_list_plural_error">Error: Could not delete lists</string>
     <string name="toast_new_list_created_error">Error: Could not create new list</string>
     <string name="toast_list_saved_error">Error: Could not save list</string>
+    <string name="toast_same_as_app_name_error">Error: Please use a different name</string>
     <string name="toast_list_opened_error">Error: Could not open list</string>
     <string name="toast_image_attach_error">Error: Could not attach image</string>
     <string name="toast_date_set_error">Error: Could not set date</string>

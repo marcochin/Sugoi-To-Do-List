@@ -220,6 +220,11 @@ public class MainActivity extends AppCompatActivity implements DataRetriever,
     @Override
     public void OnSaveAsClick(Context context, String savedListName) {
         //return if name already exists
+        if(savedListName.equals(getString(R.string.app_name))){
+            Toast.makeText(context, R.string.toast_same_as_app_name_error, Toast.LENGTH_LONG).show();
+            return;
+        }
+
         if (getSQLiteDB().isTableExist(savedListName)) {
             Toast.makeText(context, R.string.toast_duplicate_list_name, Toast.LENGTH_LONG).show();
         } else {
