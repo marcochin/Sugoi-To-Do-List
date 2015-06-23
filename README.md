@@ -3,7 +3,9 @@ Android: This is a to do list app that lets you jot tasks down so you don't forg
 Also allows you to attach images by taking a picture or picking from the gallery.
 Uses some cool libraries to provide fantastic UX and UI.
 
-User Stories:
+***
+
+### User Stories:
   1. User can add an item using the action button in the bottom right corner.
   2. User can delete an item by swiping left on an item.
   4. User can undo a deleted item if he/she wishes.
@@ -19,8 +21,12 @@ User Stories:
 
 ![](http://i.imgur.com/dn9TDfJ.gif)
 
+***
+
 ### Credits:
 
+This is a project submission to [CodePath](http://courses.codepath.com/snippets/intro_to_android/prework. "CodePath")
+</br>
 Icons are from [https://icons8.com/](https://icons8.com "icons8")
 
 Designed for <b>Android JellyBean API 16+</b>
