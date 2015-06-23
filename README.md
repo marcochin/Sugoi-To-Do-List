@@ -10,7 +10,7 @@ Uses some cool libraries to provide fantastic UX and UI.
   2. User can delete an item by swiping left on an item.
   4. User can undo a deleted item if he/she wishes.
   5. User can edit an item by swiping right on an item.
-  6. Uesr can tap on an item to check the item.
+  6. User can tap on an item to check the item.
   7. User can reprioritize/rearrange the list by holding down on an item, then dragging and dropping.
   8. User can add date and time to the item.
   9. User can add an image to an item by taking a picture with the camera or choosing an image from the gallery.
